@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Products Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Cascading Style Sheets/products.css">
+    <link rel="stylesheet" href="Cascading Style Sheets/stylesheet.css">
+    <script src="JScripts/products.js"></script>
+    <script src="./JScripts/zoom.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Modak&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a name="topper"></a>
+        <img id="logo" src="Images/athens logo.png" alt="logo">
+        <div class="navbar">
+            <ul>
+                <li><a class="link" href="Main.html">Home</a></li>
+                <li><a class="link" href="Products.html">Products</a></li>
+                <li><a class="link" href="Quiz.html">Quiz</a></li>
+                <li><a class="link" href="#" id="sub-content">Explore</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Cricket.html" class="a">Cricket</a></li>
+                            <li class="li"><a href="Tennis.html" class="a">Tennis</a></li>
+                            <li class="li"><a href="Swimming.html" class="a">Swimming</a></li>
+                            <li class="li"><a href="Hockey.html" class="a">Hocky</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a class="link" href="Gallery.html">Gallery</a></li>
+                <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                <li><a class="link" href="#">About us</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Feedback.html" class="a">Academy</a></li>
+                            <li class="li"><a href="Team.html" class="a">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <input class="zoom" type="button" id="zoom-btn" value="+" onClick="increase()" />
+        <input class="zoom" type="button" id="zoom-btn" value="-" onClick="decrease()" />
+    </div>
+
+    <div class="content">
+        <div class="grid-container">
+            <main id="main">
+                <section id="section-one">
+                    <div class="image">
+                        <img src="Images/girls.jpg" style="width:100%;">
+                        <h1 class="image-content">OUR STORE</h1>
+                        <h2 class="image-content">lOOK YOUR BEST,PLAY YOUR BEST</h2>
+                    </div>
+                </section>
+            </main>
+            <section id="section-two">
+                <button class="tablink" onclick="openPage('shoes', this, '#000033')">Shoes</button>
+                <button class="tablink" onclick="openPage('womens', this, '#000033')" id="defaultOpen">Womens
+                    Wear</button>
+                <button class="tablink" onclick="openPage('mens', this, '#000033')">Mens Wear</button>
+                <button class="tablink" onclick="openPage('accessories', this, '#000033')">Accessories</button>
+                <div class="cart-details">
+                    <button class="cart">
+                        <ion-icon name="basket"></ion-icon>Cart <span> ( 0 ) </span>
+                    </button>
+                    <button class="cart" id="checkoutBtn">Checkout</button>
+                    <button class="cart" id="cancelbutton">Cancel</button>
+                </div>
+
+                <!-----------------------1 st one-------------------------->
+                <div id="shoes" class="tabcontent">
+
+                    <div class="container">
+                        <div class="product" id="product1">
+                            <img src="Images/shoe2.jpg" width="300" height="300" alt="girls-Nike">
+                            <div class="descripton">
+                                <h3>Girls Nike Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.8000</p>
+                                </div>
+                                <a class="Cart cart_1">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product2">
+                            <img src="Images/shoe3.jpg" width="300" height="300" alt="redPro">
+                            <div class="descripton">
+                                <h3>Nike Pro Red Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.4500</p>
+                                </div>
+                                <a class="Cart cart_2">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product3">
+                            <img src="Images/nikepro.jpg" width="300" height="300" alt="AirMax">
+                            <div class="descripton">
+                                <h3>Nike Orange Air Max Plus Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.2500</p>
+                                </div>
+                                <a class="Cart cart_3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product4">
+                            <img src="Images/shoe5.jpg" width="300" height="300" alt="Luci">
+                            <div class="descripton">
+                                <h3>Luci Max Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.10,000</p>
+                                </div>
+                                <a class="Cart cart_4">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product5">
+                            <img src="Images/shoe6.jpg" width="300px" height="300px" alt="nikeLuminus">
+                            <div class="descripton">
+                                <h3>Nike Luminus Max Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.14,000</p>
+                                </div>
+                                <a class="Cart cart_5">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product6">
+                            <img src="Images/shoe7.jpg" width="300" height="300" alt="nikesporty">
+                            <div class="descripton">
+                                <h3>Nike Sporty Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.7500</p>
+                                </div>
+                                <a class="Cart cart_6">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product7">
+                            <img src="Images/Spikes.jpeg" width="300" height="300" alt="nikeSpike">
+                            <div class="descripton">
+                                <h3>Nike Spikes Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.15,000</p>
+                                </div>
+                                <a class="Cart cart_7">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product8">
+                            <img src="Images/shoe9.jpg" width="300" height="300" alt="nikeWave">
+                            <div class="descripton">
+                                <h3>Nike Wave Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.9000</p>
+                                </div>
+                                <a class="Cart cart_8">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product9">
+                            <img src="Images/FILA.jpg" width="300px" height="300px" alt="FILAshoe">
+                            <div class="descripton">
+                                <h3>FILA Tennis Shoes</h3>
+                                <div class="price">
+                                    <p>Rs.7000</p>
+                                </div>
+                                <a class="Cart cart_9">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!----------------------------------2 nd--------------------------------->
+                <div id="womens" class="tabcontent">
+
+                    <div class="container">
+                        <div class="product" id="product1">
+                            <img src="Images/fg.jpg" width="300" height="300" alt="LuciMax">
+                            <div class="descripton">
+                                <h3>Lusi Max T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.2000</p>
+                                </div>
+                                <a class="Cart cart_11">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product2">
+                            <img src="Images/pro.jpg" width="300" height="300" alt="nikeCrop">
+                            <div class="descripton">
+                                <h3>Nike Crop Top</h3>
+                                <div class="price">
+                                    <p>Rs.2500</p>
+                                </div>
+                                <a class="Cart cart_12">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product3">
+                            <img src="Images/prowe.jpg" width="300" height="300" alt="SportsKit">
+                            <div class="descripton">
+                                <h3>Nike Sports Kit</h3>
+                                <div class="price">
+                                    <p>Rs.9500</p>
+                                </div>
+                                <a class="Cart cart_13">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product4">
+                            <img src="Images/P6.jpg" width="300" height="300" alt="peachesSporty">
+                            <div class="descripton">
+                                <h3>Peaches Sporty Kit</h3>
+                                <div class="price">
+                                    <p>Rs.10,000</p>
+                                </div>
+                                <a class="Cart cart_14">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product5">
+                            <img src="Images/pink.jpg" width="300px" height="300px" alt="peachesLev">
+                            <div class="descripton">
+                                <h3>Peaches Lev Sporty Kit</h3>
+                                <div class="price">
+                                    <p>Rs.11000</p>
+                                </div>
+                                <a class="Cart cart_15">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product6">
+                            <img src="Images/peaches1.JPG" width="300" height="300" alt="peachesPro">
+                            <div class="descripton">
+                                <h3>Peaches Pro Sporty Kit</h3>
+                                <div class="price">
+                                    <p>Rs.14000</p>
+                                </div>
+                                <a class="Cart cart_16">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product7">
+                            <img src="Images/PUMA-Revolt-Taped-Black-T-Shirt.jpg" width="300" height="300" alt="pumaTee">
+                            <div class="descripton">
+                                <h3>Puma T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.4000</p>
+                                </div>
+                                <a class="Cart cart_17">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product8">
+                            <img src="Images/nit.jpg" width="300" height="300" alt="pumaAir">
+                            <div class="descripton">
+                                <h3>Puma Air Tee</h3>
+                                <div class="price">
+                                    <p>Rs.5000</p>
+                                </div>
+                                <a class="Cart cart_18">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product9">
+                            <img src="Images/pro-womens-graphic-short-sleeve-top-FjJNkW.jpg" width="300px" alt="nikeLive">
+                            <div class="descripton">
+                                <h3>Nike Live Crop Tee</h3>
+                                <div class="price">
+                                    <p>Rs.3000</p>
+                                </div>
+                                <a class="Cart cart_19">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 
+         --------------------- 3 rd one ---------------------------------------->
+                <div id="mens" id="up" id="down" class="tabcontent">
+                    <div class="container">
+                        <div class="product" id="product1">
+                            <img src="Images/81gfXiVie9L._UX342_.jpg" width="300" height="300" alt="puma">
+                            <div class="descripton">
+                                <h3>PUMA T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.3500</p>
+                                </div>
+                                <a class="Cart cart_20">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product2">
+                            <img src="Images/add3.jpg" width="300" height="300" alt="menAddi0">
+                            <div class="descripton">
+                                <h3>Adidas Marvel T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.3000</p>
+                                </div>
+                                <a class="Cart cart_21">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product3">
+                            <img src="Images/adi1.jpg" width="300" height="300" alt="menAddi1">
+                            <div class="descripton">
+                                <h3>Adidas Pro Mens T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.5000</p>
+                                </div>
+                                <a class="Cart cart_22">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product4">
+                            <img src="Images/adi2.jpg" width="300" height="300" alt="menAddi2">
+                            <div class="descripton">
+                                <h3>Adidas Swiss Mens T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.4400</p>
+                                </div>
+                                <a class="Cart cart_23">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product5">
+                            <img src="Images/adi4.jpg" width="300" height="300" alt="menAddi3">
+                            <div class="descripton">
+                                <h3>Adidas Mens T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.3000</p>
+                                </div>
+                                <a class="Cart cart_24">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product6">
+                            <img src="Images/men4.jpg" width="300" height="300" alt="menAddi4">
+                            <div class="descripton">
+                                <h3>Adidas Mens Lev T-Shirt</h3>
+                                <div class="price">
+                                    <p>Rs.3000</p>
+                                </div>
+                                <a class="Cart cart_25">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product7">
+                            <img src="Images/dri-fit-mens-long-sleeve.jpg" width="300" height="300" alt="NikeMen">
+                            <div class="descripton">
+                                <h3>Nike dri-Fit Long Sleeves T-Shirt</h3>
+                            </div>
+                            <div class="price">
+                                <p>Rs.4000</p>
+                                <a class="Cart cart_26">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product8">
+                            <img src="Images/ArmourMens.jpg" width="300" height="300" alt="ArmourMen1">
+                            <div class="descripton">
+                                <h3>Armour Mens T-Shirt</h3>
+                            </div>
+                            <div class="price">
+                                <p>Rs.4000</p>
+                                <a class="Cart cart_27">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product9">
+                            <img src="Images/ArmourMens2.jpg" width="300" height="300" alt="ArmourMen2">
+                            <div class="descripton">
+                                <h3>Armour Pro Mens T-Shirt</h3>
+                            </div>
+                            <div class="price">
+                                <p>Rs.3000</p>
+                                <a class="Cart cart_28">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-------------------- 4 th tab --------------------------------------------->
+                <div id="accessories" class="tabcontent">
+                    <div class="container">
+                        <div class="product" id="product1">
+                            <img src="Images/gloves.jpg" width="300" height="300" alt="kahunaGlv">
+                            <div class="descripton">
+                                <h3>Kookaburra kahuna gloves</h3>
+                                <div class="price">
+                                    <p>Rs.8000</p>
+                                </div>
+                                <a class="Cart cart_29">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product2">
+                            <img src="Images/Rebel_whitegreen_pads.jpg" width="300" height="300" alt="kahunaBattingPads">
+                            <div class="descripton">
+                                <h3>Kookaburra kahuna batting pads</h3>
+                                <div class="price">
+                                    <p>Rs.4500</p>
+                                </div>
+                                <a class="Cart cart_30">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product3">
+                            <img src="Images/helmet.jpg" width="300" height="300" alt="helmet">
+                            <div class="descripton">
+                                <h3>Kookaburra Pro 600 Helmet</h3>
+                                <div class="price">
+                                    <p>Rs.2500</p>
+                                </div>
+                                <a class="Cart cart_31">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product4">
+                            <img src="Images/nike.jpg" width="300" height="300" alt="blackBag">
+                            <div class="descripton">
+                                <h3>Nike Pro black Bag</h3>
+                                <div class="price">
+                                    <p>Rs.10,000</p>
+                                </div>
+                                <a class="Cart cart_32">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product5">
+                            <img src="Images/red.jpg" width="300" height="300" alt="Kipsta">
+                            <div class="descripton">
+                                <h3>Kipsta Sports Bag</h3>
+                                <div class="price">
+                                    <p>Rs.4000</p>
+                                </div>
+                                <a class="Cart cart_33">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product6">
+                            <img src="Images/Sbag.jpg" width="300" height="300" alt="LevBag">
+                            <div class="descripton">
+                                <h3>Lev Sports Bag</h3>
+                                <div class="price">
+                                    <p>Rs.7500</p>
+                                </div>
+                                <a class="Cart cart_34">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product7">
+                            <img src="Images/tennis.jpg" width="300" height="300" alt="Babolat">
+                            <div class="descripton">
+                                <h3>Babolat Tennis Racket</h3>
+                                <div class="price">
+                                    <p>Rs.8000</p>
+                                </div>
+                                <a class="Cart cart_35">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product8">
+                            <img src="Images/hockeyStick.jpg" width="300" height="300" alt="hockeyStick">
+                            <div class="descripton">
+                                <h3>Xpr 50 Field Hockey Stick</h3>
+                                <div class="price">
+                                    <p>Rs.4000</p>
+                                </div>
+                                <a class="Cart cart_36">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="product" id="product9">
+                            <img src="Images/goggles.jpg" width="300" height="300" alt="swimgoggle">
+                            <div class="descripton">
+                                <h3>Swimming Goggles</h3>
+                                <div class="price">
+                                    <p>Rs.7000</p>
+                                </div>
+                                <a class="Cart cart_37">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="cartModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="cartModal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h4>Checkout </h4>
+                    </div>
+                    <div id="content">
+                        <div class="form-inline">
+                            <label for="name">Name</label>
+                            <input type="text" id="input-name" placeholder="Enter name" name="name" value="">
+                            <label for="accNumber">Account Number:</label>
+                            <input type="text" id="accNumber" placeholder="Enter Account Number" name="accNumber" value="">
+                            <label for="mobile">Mobile: </label>
+                            <input type="text" id="mobile" placeholder="Enter Mobile" name="mobile" value="">
+                            <button type="submit" class="pay-button" id="paybutton">Pay</button>
+                        </div>
+                        <div id="validation"></div>
+                        <!-- <div> -->
+                        <table id="cart-table">
+
+                        </table>
+                    </div>
+                    <div id="content2">
+
+                    </div>
+                    <!-- </div> -->
+                    <div class="modal-footer">
+                        <h4 id="totalPrice">Total Price : 0</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- footer-->
+            <div id="footer">
+                <div id="footerLogo">
+                    <img id="footerImage" src="Images/athens logo.png" alt="logo">
+                </div>
+                <div id="copyrights">
+                    <a id="top" href="#topper"><img id="back" src="Images/back.png" alt="back" /><br>back to top</a>
+                    <a id="editor" href="pageEditorStudent1.html"><img id="user" src="Images/user.png" alt="user" /><br>Page Editor</a><br/><br/><br/><br/>
+                    <h3 class="footer-h3" id="copy-blue">© 2020 ATHENS ACADEMY. ALL RIGHTS RESERVED.</h3>
+
+
+                </div>
+                <div id="address">
+                    <h3 class="footer-h3">Athens Acadamy</h3>
+                    <p class="footer-para">45, High Level Road, <br/>Pepiliyana, Colombo</p>
+                    <h3 class="footer-h3">Contact us</h3>
+                    <p class="footer-para">Hotline : +94 113 56 2177<br/>Fax : +94 113 56 2177<br/>Email : Aethensacademy@gmail.com</p>
+                </div>
+                <div id="contact">
+                    <ul class="footer-h3"> Navigation
+                        <li><a class="link" href="Main.html">Home</a></li>
+                        <li><a class="link" href="Products.html">Products</a></li>
+                        <li><a class="link" href="Quiz.html">Quiz</a></li>
+                        <li><a class="link" href="Cricket.html">Explore</a></li>
+                        <li><a class="link" href="Gallery.html">Gallery</a></li>
+                        <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                        <li><a class="link" href="Feedback.html">About us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        let carts = document.querySelectorAll('.Cart');
+
+        let checkoutArray = []
+        localStorage.clear()
+
+        let products = [{
+                name: 'Girls Nike Shoes',
+                price: 8000,
+                quantity: 6,
+                inCart: 0
+            }, {
+                name: 'Nike Pro Red',
+                price: 4500,
+                quantity: 8,
+                inCart: 0
+            }, {
+                name: 'Nike Orange Air Max Plus ',
+                price: 25000,
+                quantity: 4,
+                inCart: 0
+            }, {
+                name: 'Luci Max  shoes',
+                price: 10000,
+                quantity: 6,
+                inCart: 0
+            }, {
+                name: 'Nike Luminus Max ',
+                price: 14000,
+                quantity: 3,
+                inCart: 0
+            }, {
+                name: 'Nike Sporty  shoes',
+                price: 7500,
+                quantity: 6,
+                inCart: 0
+            }, {
+                name: 'Nike Spikes Shoes',
+                price: 15000,
+                quantity: 9,
+                inCart: 0
+            }, {
+                name: ' Nike Wave Shoes',
+                price: 9000,
+                quantity: 9,
+                inCart: 0
+            }, {
+                name: 'FILA Tennis Shoes',
+                price: 7000,
+                quantity: 12,
+                inCart: 0
+            },
+            // ------------------womens wear---------------------
+            {
+                name: 'Lusi Max T-Shirt',
+                price: 2000,
+                quantity: 12,
+                inCart: 0
+            }, {
+                name: 'Nike Crop Top',
+                price: 2500,
+                quantity: 7,
+                inCart: 0
+            }, {
+                name: 'Nike Sports Kit',
+                price: 9500,
+                quantity: 12,
+                inCart: 0
+            }, {
+                name: 'peaches Sporty Kit',
+                price: 10000,
+                quantity: 4,
+                inCart: 0
+            }, {
+                name: 'peaches Lev Sporty Kit',
+                price: 11000,
+                quantity: 3,
+                inCart: 0
+            }, {
+                name: 'Peaches Pro Sporty Kit',
+                price: 14000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Puma T-Shirt',
+                price: 4000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Puma Air Tee',
+                price: 5000,
+                quantity: 8,
+                inCart: 0
+            }, {
+                name: 'Nike Live Crop Tee',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            },
+
+            // -------------------mens wear---------------------
+            {
+                name: 'PUMA T-Shirt',
+                price: 3500,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Adidas Marvel T-Shirt',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Adidas Pro Mens T-Shirt',
+                price: 5000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Adidas Swiss Mens T-Shirt',
+                price: 4400,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Adidas Mens T-Shirt',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Adidas Mens Lev T-Shirt',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Nike dri-Fit Long Sleeves T-Shirt',
+                price: 4000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Nike Live Crop Tee',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Nike Live Crop Tee',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            },
+            // -----------------------Accessories----------------------
+
+            {
+                name: 'kahuna gloves',
+                price: 8000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'kahuna batting pads',
+                price: 4500,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Kookaburra Helmet',
+                price: 2500,
+                quantity: 7,
+                inCart: 0
+            }, {
+                name: 'Nike Pro black Bag',
+                price: 10000,
+                quantity: 8,
+                inCart: 0
+            }, {
+                name: 'Nike Live Crop Tee',
+                price: 3000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Kipsta Sports Bag',
+                price: 4000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Lev Sports Bag',
+                price: 7500,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Babolat Tennis Racket',
+                price: 8000,
+                quantity: 5,
+                inCart: 0
+            }, {
+                name: 'Xpr 50 Field Hockey Stick',
+                price: 4000,
+                quantity: 7,
+                inCart: 0
+            },
+        ];
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener('click', () => {
+                cartNum(products[i]);
+                totalCost(products[i]);
+            })
+        }
+
+        function onLoadCartNumbers() {
+            let productNum = localStorage.getItem('cartNum');
+            if (productNum) {
+                document.querySelector('.cart span').textContent = " ( " + productNum + " )";
+            }
+        }
+
+
+        function cartNum(products) {
+
+            let productNum = localStorage.getItem('cartNum');
+
+            productNum = parseInt(productNum);
+
+            if (productNum) {
+                localStorage.setItem('cartNum', productNum + 1);
+                productNum += 1
+                document.querySelector('.cart span').textContent = " ( " + productNum + " )";
+            } else {
+                localStorage.setItem('cartNum', 1);
+                document.querySelector('.cart span').textContent = " ( " + 1 + " )";
+            }
+            setItem(products);
+        }
+
+        function setItem(products) {
+            console.log("Inside the setitems functon");
+            console.log("My product is", products);
+            checkoutArray.push(products)
+            console.log(checkoutArray)
+                // products.inCart = 1;
+
+            let cartItems = {
+                    [products.tag]: products
+                }
+                //   localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+        }
+
+        function totalCost(products) {
+            console.log("The product price is ", products.price);
+            let cartCost = localStorage.getItem('totalCost');
+            console.log('My cart cost is', cartCost);
+        }
+        onLoadCartNumbers();
+
+
+
+        // Get the modal
+        var getModal = document.getElementById("cartModal");
+
+        // Get the button that opens the modal
+        var button = document.getElementById("checkoutBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var result
+        var quantityPrice = 0
+            // When the user clicks on the button, open the modal
+        button.onclick = function() {
+
+            result = checkoutArray.filter(function(a) {
+                var key = a.name;
+                if (!this[key]) {
+                    this[key] = true;
+                    return true;
+                }
+            }, Object.create(null));
+            if (result.length < 3) {
+                alert("You need to add three different items to checkout. ")
+            } else {
+                getModal.style.display = "block";
+                var output = ""
+                for (var i in result) {
+                    output += "<tr>" +
+                        "<td>" + result[i].name + "</td>" +
+                        "<td>(" + result[i].price + ")</td>"
+                        // + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + result[i].name + ">-</button>"
+                        +
+                        "<td><input type='number' class='item-count form-control input-group-addon' id= '" + result[i].name + "' data-name='" + result[i].name + "' value='" + 0 + "'></td>"
+                        // + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + result[i].name + ">+</button></div></td>"
+                        +
+                        "<td><button class='delete-item btn btn-danger' data-name=" + result[i].name + ">Qty.</button></td>"
+                        // + "<td> = " + (result[i].price * quantityPrice) + "</td>"
+                        +
+                        "</tr>";
+                }
+
+
+                var carttable = document.getElementById("cart-table");
+                carttable.innerHTML = output
+            }
+            let price = 0
+            var x = document.getElementById('totalPrice')
+            for (let i = 0; i < result.length; i++) {
+                let a = document.getElementById(result[i].name)
+
+                a.addEventListener('change', (e) => {
+                    console.log("E", e.target.id, result[i])
+                    if (e.target.id === result[i].name) {
+                        var value = parseInt(e.target.value)
+                        price -= result[i].inCart * result[i].price;
+                        result[i].inCart = value
+                        console.log("result", result)
+                            // return value
+
+
+                    }
+                    console.log("pricePre", price)
+                    price += result[i].inCart * result[i].price;
+                    console.log("price{ps", price)
+                    quantityPrice = price
+                    x.innerHTML = "Total Price : " + quantityPrice
+                    console.log(result)
+
+
+                })
+                price = +result[i].inCart * result[i].price;
+                console.log("price", price)
+                quantityPrice = price
+                x.innerHTML = "Total Price : " + quantityPrice
+                console.log(result)
+
+
+            }
+
+        }
+
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            getModal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == getModal) {
+                getModal.style.display = "none";
+            }
+        }
+
+        var buttonCancel = document.getElementById("cancelbutton");
+        buttonCancel.onclick = function() {
+            checkoutArray = []
+            localStorage.setItem('cartNum', 0);
+            document.querySelector('.cart span').textContent = " ( " + 0 + " ) ";
+        }
+        let paybutton = document.getElementById("paybutton")
+        let validation = document.getElementById("validation")
+        let inputName = document.getElementById("input-name")
+        let accNumber = document.getElementById("accNumber")
+        let mobile = document.getElementById("mobile")
+        let name, acc, tp
+        inputName.addEventListener('change', (e) => {
+            name = e.target.value
+        })
+        accNumber.addEventListener('change', (e) => {
+            acc = e.target.value
+        })
+        mobile.addEventListener('change', (e) => {
+            tp = e.target.value
+        })
+        paybutton.onclick = function() {
+            console.log(typeof name, name, mobile)
+            if (!name || !acc || !tp) {
+                validation.style.display = "flex"
+                validation.innerHTML = "Name, Account Number, Mobile fields are required."
+            } else {
+                validation.style.display = "none"
+                var carttable = document.getElementById("content");
+                carttable.style.display = "none"
+                var content2 = document.getElementById('content2')
+                content2.style.display = "flex"
+                content2.style.justifyContent = "center"
+                content2.style.padding = "50px"
+                content2.style.fontSize = "x-large"
+                content2.style.fontWeight = "700"
+                content2.innerHTML = "Dear " + name + " thank you for your order. Your total bill is Rs. " + quantityPrice + "."
+                localStorage.clear()
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

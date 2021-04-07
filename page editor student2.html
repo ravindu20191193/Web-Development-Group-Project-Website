@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page Editor-Rathushan</title>
+	<link rel="stylesheet" href="Cascading Style Sheets/stylesheet.css">
+	<style>
+		.container{
+			width: 100%;
+			height: 100%;
+			overflow:auto;
+			position: relative;
+			background: #0075FF;
+			
+			display: grid;
+			height: 100vh;
+			grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+			grid-template-rows: 0.3fr 1.5fr 1.2fr;
+			grid-template-areas: 
+				"logo navbar navbar navbar"
+				"description description description-photo description-photo"
+				"footer footer footer footer";
+			grid-gap: 0.2rem;
+
+		}
+		
+		#description{
+			grid-area: description;
+			width: 100%;
+			height: 670px;
+			text-shadow: none;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 100px;
+		}
+		
+		#footer{
+			grid-area: footer;
+		}
+		
+		P{
+			text-shadow: none;
+			color: aliceblue;
+		}
+		
+		h1{
+			text-decoration: underline;
+		}
+		
+		
+		.link-sub a{
+			text-align: left;
+			margin-left: 40%;
+			font-size: 24px;
+			line-height: 40px;
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+			<div id="logo">
+				<a name="topper"></a>
+				<img id= "logoImage" src="Images/athens logo.png" alt="logo">
+			</div>
+			
+			<div class="navbar">
+				<ul>
+					<li><a class="link" href = "Main.html" >Home</a></li>
+					<li><a class="link" href = "Products.html">Products</a></li>
+					<li><a class="link" href = "Quiz.html">Quiz</a></li>
+					<li><a class="link" href = "#" id="sub-content">Explore</a>
+						<div class="sub-menu">
+							<ul class="sub-ul" >
+								<li class="li"><a href="Cricket.html" class="a">Cricket</a></li>
+								<li class="li"><a href="Tennis.html" class="a">Tennis</a></li>
+								<li class="li"><a href="Swimming.html" class="a">Swimming</a></li>
+								<li class="li"><a href="HOCKEY.html" class="a">Hocky</a></li>
+							</ul>
+						</div></li>
+						
+					<li><a class="link" href = "Gallery.html">Gallery</a></li>
+					<li><a class="link" href = "Sitemap.html">Sitemap</a></li>
+					<li><a class="link" href = "#">About us</a>
+						<div class="sub-menu">
+							<ul class="sub-ul" >
+								<li class="li"><a href="Feedback.html" class="a">Academy</a></li>
+								<li class="li"><a href="Team.html" class="a">Team</a></li>
+							</ul>
+						</div></li>
+				</ul>
+			</div>
+			
+			
+			<div id="description">
+				<h1>CHANDRAESEKARAN RATHUSHAN</h1>
+				<p>IIT ID : 20191029 || UoW ID : W1790292<br><br>
+
+				DEVELOPER ROLE : Student 2<br><br>
+
+				SITE NAME : ATHENS</p>
+				<h2 style="text-decoration: underline;margin-top: 30px;color: black;">Tasks</h2>
+				<ul style="text-align: left;margin-left: 40%;font-size: 24px;line-height: 40px;color: aliceblue;">
+					<li><a class="link-sub" href = "Main.html" style="color: aliceblue">Home</a></li>
+					<li><a class="link-sub" href = "Cricket.html" style="color: aliceblue">Explore</a>
+					<li><a class="link-sub" href = "Feedback.html" style="color: aliceblue">About us</a>
+					<li>External Cascadingsheet</li>
+				</ul>
+		  	</div>
+
+				
+			<!-- footer-->
+			<div id="footer">
+				<div id="footerLogo">
+					<img id= "footerImage" src = "Images/athens logo.png" alt="logo">
+				</div>
+				<div id="copyrights">
+					<a id="top" href = "#topper"><img id="back" src="Images/back.png" alt="back"/><br>back to top</a>
+					<a id="editor" href="page editor student2.html"><img id="user" src="Images/user.png" alt="user"/><br>Page Editor</a><br/><br/><br/><br/>
+					<h3 class="footer-h3" id="copy-blue">© 2020 ATHENS ACADEMY. ALL RIGHTS RESERVED.</h3>
+					
+					
+				</div>
+				<div id="address">
+					<h3 class="footer-h3" >Athens Acadamy</h3>
+					<p class="footer-para">45, High Level  Road, <br/>Pepiliyana, Colombo</p>
+					<h3 class="footer-h3">Contact us</h3>
+					<p class="footer-para">Hotline : +94 113 56 2177<br/>Fax : +94 113 56 2177<br/>Email : Aethensacademy@gmail.com</p>
+				</div>
+				<div id="contact">
+					<ul class="footer-h3"> Navigation
+						<li><a class="link" href = "Main.html" >Home</a></li>
+						<li><a class="link" href = "Products.html">Products</a></li>
+						<li><a class="link" href = "Quiz.html">Quiz</a></li>
+						<li><a class="link" href = "Cricket.html" >Explore</a>
+						<li><a class="link" href = "Gallery.html">Gallery</a></li>
+						<li><a class="link" href = "Sitemap.html">Sitemap</a></li>
+						<li><a class="link" href = "Feedback.html">About us</a>
+					<ul>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

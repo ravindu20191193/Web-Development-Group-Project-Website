@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="Cascading Style Sheets/quiz.css">
+    <link rel="stylesheet" href="Cascading Style Sheets/stylesheet.css">
+    <script src="JScripts/zoom.js"></script>
+</head>
+
+<body id="zoom-text">
+
+    <div class="container">
+        <div id="logo">
+            <a name="topper"></a>
+            <img id="logoImage" src="Images/athens logo.png" alt="logo">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a class="link" href="Main.html">Home</a></li>
+                <li><a class="link" href="Products.html">Products</a></li>
+                <li><a class="link" href="Quiz.html">Quiz</a></li>
+                <li><a class="link" href="#" id="sub-content">Explore</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Cricket.html" class="a">Cricket</a></li>
+                            <li class="li"><a href="Tennis.html" class="a">Tennis</a></li>
+                            <li class="li"><a href="Swimming.html" class="a">Swimming</a></li>
+                            <li class="li"><a href="Hockey.html" class="a">Hocky</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a class="link" href="Gallery.html">Gallery</a></li>
+                <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                <li><a class="link" href="#">About us</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Feedback.html" class="a">Academy</a></li>
+                            <li class="li"><a href="Team.html" class="a">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <input class="zoom" type="button" id="zoom-btn" value="+" onClick="increase()" />
+            <input class="zoom" type="button" id="zoom-btn" value="-" onClick="decrease()" />
+        </div>
+
+        <div class="body">
+            <h2>Let's Get Quizzing!</h2>
+            <ol>
+                <li>The Quiz comprises of 10 questions based on Football</li>
+                <li>Each question gives you 10 seconds to answer before automatically moving onto the next question</li>
+                <li>Every correct answer gets you 2 points while every wrong answer will cost you one point</li>
+                <li>Scroll down to see how you scored</li>
+                <li>Have Fun and Good Luck!</li>
+            </ol>
+
+
+        </div>
+
+        <!-----Starting the Quiz function--------->
+        <div id="containerQuiz">
+            <button id="start">Start Quiz!</button>
+            <div id="quiz" style="display: none">
+                <div id="question"></div>
+                <div id="qImg"></div>
+                <div id="choices">
+                    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                </div>
+                <div id="timer">
+                    <div id="counter"></div>
+                    <div id="btimeGauge"></div>
+                    <div id="timeGauge"></div>
+                </div>
+                <div id="progress"></div>
+            </div>
+            <div id="scoreContainer" style="display: none"><button>Review Questions</button></div>
+            <!----Calling the Quiz function---->
+            <script src="JScripts/quiz.js"></script>
+        </div>
+
+        <!-- footer-->
+        <div id="footer">
+            <div id="footerLogo">
+                <img id="footerImage" src="Images/athens logo.png" alt="logo">
+            </div>
+            <div id="copyrights">
+                <a id="top" href="#topper"><img id="back" src="Images/back.png" alt="back" /><br>back to top</a>
+                <a id="editor" href="PageEditor3.html"><img id="user" src="Images/user.png" alt="user" /><br>Page Editor</a><br/><br/><br/><br/>
+                <h3 class="footer-h3" id="copy-blue">© 2020 ATHENS ACADEMY. ALL RIGHTS RESERVED.</h3>
+
+
+            </div>
+            <div id="address">
+                <h3 class="footer-h3">Athens Acadamy</h3>
+                <p class="footer-para">45, High Level Road, <br/>Pepiliyana, Colombo</p>
+                <h3 class="footer-h3">Contact us</h3>
+                <p class="footer-para">Hotline : +94 113 56 2177<br/>Fax : +94 113 56 2177<br/>Email : Aethensacademy@gmail.com</p>
+            </div>
+            <div id="contact">
+                <ul class="footer-h3"> Navigation
+                    <li><a class="link" href="Main.html">Home</a></li>
+                    <li><a class="link" href="Products.html">Products</a></li>
+                    <li><a class="link" href="Quiz.html">Quiz</a></li>
+                    <li><a class="link" href="Cricket.html">Explore</a></li>
+                    <li><a class="link" href="Gallery.html">Gallery</a></li>
+                    <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                    <li><a class="link" href="Feedback.html">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

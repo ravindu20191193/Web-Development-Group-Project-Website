@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>About us</title>
+    <!-- links for css & js files -->
+    <link rel="stylesheet" href="Cascading Style Sheets/feedback.css">
+    <link rel="stylesheet" href="Cascading Style Sheets/stylesheet.css">
+    <script type="text/javascript" src="JScripts/feedback.js"></script>
+
+</head>
+
+<body id="zoom-text">
+
+    <div class="container">
+        <!-- logo of the page -->
+        <div id="logo">
+            <a name="topper"></a>
+            <img id="logoImage" src="Images/athens logo.png" alt="logo">
+        </div>
+
+        <!-- navigation bar -->
+        <div class="navbar">
+            <ul>
+                <li><a class="link" href="Main.html">Home</a></li>
+                <li><a class="link" href="Products.html">Products</a></li>
+                <li><a class="link" href="Quiz.html">Quiz</a></li>
+                <li><a class="link" href="#" id="sub-content">Explore</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Cricket.html" class="a">Cricket</a></li>
+                            <li class="li"><a href="Tennis.html" class="a">Tennis</a></li>
+                            <li class="li"><a href="Swimming.html" class="a">Swimming</a></li>
+                            <li class="li"><a href="Hockey.html" class="a">Hocky</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a class="link" href="Gallery.html">Gallery</a></li>
+                <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                <li><a class="link" href="#">About us</a>
+                    <div class="sub-menu">
+                        <ul class="sub-ul">
+                            <li class="li"><a href="Feedback.html" class="a">Academy</a></li>
+                            <li class="li"><a href="Team.html" class="a">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- zoom in & zoom out buttons -->
+            <input class="zoom" type="button" id="zoom-btn1" value="+" onClick="document.getElementById('zoom-text').style.fontSize = '2.0em'" />
+            <input class="zoom" type="button" id="zoom-btn2" value="-" onClick="document.getElementById('zoom-text').style.fontSize = '1.0em'" />
+        </div>
+
+        <!-- about us text area-->
+        <div id="about">
+            <h1 id="about-header">About</h1>
+            <p id="about-para">Athens is Sri Lanka's famous and most advanced multi sports training and educational institution. We Athens,creates a multi platform environment which has full circle designed to update the way men,women, youth and kids approach sports training
+                that Activates,educates and provides an opportunity for players to unlock their full potential. Athens Sports Academy programs include Cricket, Tennis,Swimming and Hockey with gym facilities and a Store with the latest sports wears and
+                equipments. Be a part of Athens and gather your expertise,skills and commitment to excellence. </p>
+        </div>
+
+        <!-- feedback form area -->
+        <div id="contact-form">
+            <h1 id="about-header2">Contact us</h1>
+            <div class="form">
+                <!-- to display error messages -->
+                <div id="errormessage"></div>
+
+                <!-- feedback form -->
+                <form action="/action_page.php" id="form" onSubmit="return false">
+                    <label for="name"> Name  &nbsp;: </label>
+                    <input type="text" id="name" name="name" placeholder="Your name" onChange="validator()" onKeyPress="validator()" /><br/>
+
+                    <label for="email">E-mail : </label>
+                    <input type="text" id="email" name="email" placeholder="Your E-mail" onChange="validator_mail()" onKeyPress="validator_mail()" /><br/>
+
+
+                    <label for="subject" id="sub">Message : </label>
+                    <textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea><br/>
+                    <br/><br/>
+
+                    <label for="rating" id="rater">Rating </label>
+
+                    <!-- star rating -->
+                    <div class="rate" id="rates" onClick="startClick()">
+                        <input type="radio" id="star5" name="rate" value="Execellent" />
+                        <label for="star5" title="Execellent">5 stars</label>
+
+                        <input type="radio" id="star4" name="rate" value="Very Good" />
+                        <label for="star4" title="Very Good">4 stars</label>
+
+                        <input type="radio" id="star3" name="rate" value="Good" />
+                        <label for="star3" title="Good">3 stars</label>
+
+                        <input type="radio" id="star2" name="rate" value="Poor" />
+                        <label for="star2" title="Poor">2 stars</label>
+
+                        <input type="radio" id="star1" name="rate" value="Worst" />
+                        <label for="star1" title="Worst">1 star</label>
+                    </div>
+
+                    <input type="submit" value="Submit" onClick="validate()" />
+                </form>
+            </div>
+        </div>
+
+        <!-- footer-->
+        <div id="footer">
+            <div id="footerLogo">
+                <img id="footerImage" src="Images/athens logo.png" alt="logo">
+            </div>
+            <div id="copyrights">
+                <a id="top" href="#topper"><img id="back" src="Images/back.png" alt="back" /><br>back to top</a>
+                <a id="editor" href="page editor student2.html"><img id="user" src="Images/user.png" alt="user" /><br>Page Editor</a><br/><br/><br/><br/>
+                <h3 class="footer-h3" id="copy-blue">© 2020 ATHENS ACADEMY. ALL RIGHTS RESERVED.</h3>
+
+
+            </div>
+            <div id="address">
+                <h3 class="footer-h3">Athens Acadamy</h3>
+                <p class="footer-para">45, High Level Road, <br/>Pepiliyana, Colombo</p>
+                <h3 class="footer-h3">Contact us</h3>
+                <p class="footer-para">Hotline : +94 113 56 2177<br/>Fax : +94 113 56 2177<br/>Email : Aethensacademy@gmail.com</p>
+            </div>
+            <div id="contact">
+                <ul class="footer-h3"> Navigation
+                    <li><a class="link" href="Main.html">Home</a></li>
+                    <li><a class="link" href="Products.html">Products</a></li>
+                    <li><a class="link" href="Quiz.html">Quiz</a></li>
+                    <li><a class="link" href="Cricket.html">Explore</a></li>
+                    <li><a class="link" href="Gallery.html">Gallery</a></li>
+                    <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                    <li><a class="link" href="Feedback.html">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

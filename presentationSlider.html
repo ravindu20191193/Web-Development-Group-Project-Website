@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Cascading Style Sheets/slider.css">
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="Images/tennisSlider.jpg" style="width:100%">
+  <div class="text">Student 1 : Ieshitha Wijetunge</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="Images/basketball.jpg" style="width:100%" style="height:50%">
+  <div class="text">Student 2 : Rathushan Chandrasekaran</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+<img src="Images/gymGirl.jpg" style="width:100%" style="height:25%";>
+    <div class="text">Student 3 : Hiruni Perera </div>
+  </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="Images/Rugbyyy.jpg" style="width:100%">
+  <div class="text">Student 4 : Ravindu Gunawardana</div>
+</div>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
+  setTimeout(function(){window.location.href="Main.html"},4000)
+}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+/* initialize styles for grids */
+:root{
+	--main-radius:5px;
+	--main-padding:5px;
+}
+
+/* main element container */
+.container{
+	width: 100%;
+	height: 100%;
+	overflow:auto;
+	background-image: url("../Images/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: slide 15s infinite;
+	
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+	grid-template-rows: 0.3fr 1.5fr 1.5fr 1.5fr 1.2fr;
+	grid-template-areas: 
+		"logo navbar navbar navbar"
+		"description description description-photo description-photo"
+		"content1 content1 content2 content2"
+		"content3 content3 content4 content4"
+		"footer footer footer footer";
+	grid-gap: 0.2rem;
+}
+
+/* page logo*/
+#logo{
+	grid-area: logo;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+
+}
+
+/* navigation bar */
+.navbar{
+	grid-area: navbar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+/* acadamy description left side*/
+#description{
+	grid-area: description;
+	display: grid;
+	width: 90%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	margin: 100px auto;
+}
+
+/* acadamy description left side*/
+#description-photo{
+	grid-area: description-photo;
+	margin-top: 100px;
+	margin-left: 300px;
+	width: 60%;
+	top: 40%;
+	text-align: center;
+	background: rgba(255,255,255,0.10);
+	border-radius: 50px;
+}
+
+/* font styling*/
+#description h1{
+	color: white;
+}
+	
+#description p{
+	color: whitesmoke;
+}
+
+.button{
+	background: #0984e3;
+	padding: 10px 24px;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	border-radius:20px;
+}
+
+.button:hover{
+	background: #269EF5;
+	color: #000000;
+	font-size: 20px;
+}
+
+#about-link{
+	width: 150px;
+	margin-left: 350px;
+}
+
+
+/* image of content 1*/
+#content1{
+	height: 500px;
+	grid-area: content1;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	text-align: center;
+	margin-top: 250px;
+	margin-left: 100px;
+	background-size: 600px 270px;
+	background-image: url("../Images/shoe.png");
+	background-repeat: no-repeat;
+	
+}
+
+/* content 1 text*/
+#content2{
+	height: 500px;
+	grid-area: content2;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	text-align: center;
+	margin-top: 250px;
+	text-transform: uppercase;
+	text-align: center;
+	background: rgba(255,255,255,0.10);
+	border-radius: 160px;
+}
+
+/* content 2 text*/
+#content3{
+	height: 500px;
+	grid-area: content3;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	text-align: center;
+	margin-left: 50px;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+/* image of content 2*/
+#content4{
+	height: 500px;
+	grid-area: content4;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	background-image: url("../Images/badminton.png");
+	background-repeat: no-repeat;
+	background-size: 600px 500px;
+	margin-left: 200px;
+}
+
+/* footer*/
+#footer{
+	grid-area: footer;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+	
+
+#content2 h1{
+	color: #357EFF;
+}
+
+#content2 p{
+	color: #000000;
+}
+
+#content3 h1{
+	color: white;
+}
+
+#content3 p{
+	color: whitesmoke;
+}
+
+/* animation of site background */
+@keyframes slide{
+			0%{
+				background-image: url("../Images/background.png");
+			}
+			33%{
+				background-image: url("../Images/background2.png");
+			}
+			67%{
+				background-image: url("../Images/background.png");
+			}
+		}

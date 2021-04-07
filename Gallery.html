@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+
+    <script src="JScripts/zoom.js"></script>
+    <script src="JScripts/gallery.js"></script>
+
+
+    <link rel="stylesheet" href="Cascading Style Sheets/Gallery.css" />
+
+
+</head>
+
+<body id="zoom-text">
+
+    <div id="pop">
+        <div id="pop_button"><button onclick="closepop()">Close</button></div>
+        <div id="pop_img"></div>
+        <div id="pop_text"></div>
+    </div>
+
+    <div class="container">
+        <div id="logo">
+            <a name="topper"></a>
+            <img id="logoImage" src="Images/athens logo.png" alt="logo">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a class="link" href="Main.html">Home</a></li>
+                <li><a class="link" href="Products.html">Products</a></li>
+                <li><a class="link" href="Quiz.html">Quiz</a></li>
+                <li><a class="link" href="#" id="sub-content">Explore</a>
+                    <div class="sub-menu">
+                        <ul id="sub-ul">
+                            <li class="li"><a href="Cricket.html" class="a">Cricket</a></li>
+                            <li class="li"><a href="Tennis.html" class="a">Tennis</a></li>
+                            <li class="li"><a href="Swimming.html" class="a">Swimming</a></li>
+                            <li class="li"><a href="Hockey.html" class="a">Hockey</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a class="link" href="Gallery.html">Gallery</a></li>
+                <li><a class="link" href="Sitemap.html">Sitemap</a></li>
+                <li><a class="link" href="#">About us</a>
+                    <div class="sub-menu">
+                        <ul id="sub-ul">
+                            <li class="li"><a href="Feedback.html" class="a">Academy</a></li>
+                            <li class="li"><a href="Team.html" class="a">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <input class="zoom" type="button" id="zoom-btn" value="+" onClick="document.getElementById('zoom-text').style.fontSize = '2.0em'" />
+            <input class="zoom" type="button" id="zoom-btn" value="-" onClick="document.getElementById('zoom-text').style.fontSize = '1.0em'" />
+        </div>
+
+    </div>
+
+
+    <div id="gallery.js">
+        <h1 style="margin-left: 100px ">Gallery</h1>
+
+
+
+        <div class="image-viewer" style="margin-left: 300px ; width: 1000px">
+            <a class="thumbnail"><img onclick="yellow(id)" id="one" style="width: 300px ;height: 200px" src="Images/Cups.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="two" style="width: 300px ;height: 200px" src="Images/Cricket.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="three" style="width: 300px ;height: 200px" src="Images/Ground.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="four" style="width: 300px ;height: 200px" src="Images/Gym.jfif" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="five" style="width: 300px ;height: 200px" src="Images/Hockey.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="six" style="width: 300px ;height: 200px" src="Images/Turf.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="seven" style="width: 300px ;height: 200px" src="Images/Tennis.jfif" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="eight" style="width: 300px ;height: 200px" src="Images/Swimming.jpg" /></a>
+            <a class="thumbnail"><img onclick="yellow(id)" id="nine" style="width: 300px ;height: 200px" src="Images/Dance.jpg" /></a>
+
+
+            <p>Select background color</p>
+
+            <form>
+                <label for="Colors">Choose a Color:</label>
+                <select id="selectId">
+            <option value="">-- Selecet Color --</option>
+            <option class="aqua">Aqua</option>
+            <option class="brown">Brown</option>
+            <option class="cornflowerblue">Corn Flower Blue</option>
+            <option class="bisque">Bisque</option>
+        </select>
+                <input type="button" onclick="colorbg()"> Confirm
+            </form>
+
+
+
+            <p>Select text color</p>
+
+            <form>
+                <label for="Textcolors">Choose a Color:</label>
+                <select id="selectIdtext">
+            <option value="">-- Selecet Color --</option>
+            <option class="aquaT">Aqua</option>
+            <option class="brownT">Brown</option>
+            <option class="cornflowerblueT">Corn Flower Blue</option>
+            <option class="bisqueT">Bisque</option>
+        </select>
+                <input type="button" onclick="Txtcolor()">Confirm
+            </form>
+
+
+
+
+
+
+            <div class="container" style=" margin-top: 300px">
+
+                <div id="footer">
+                    <div id="footerLogo">
+                        <img id="footerImage" src="Images/athens logo.png" alt="logo">
+                    </div>
+                    <div id="copyrights">
+                        <a id="top" href="#topper">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br/>back to top</a>
+                        <h3 class="footer-h3" id="copy-blue">© 2020 ATHENS ACADEMY.ALL RIGHTS RESERVED.</h3>
+                    </div>
+                    <div id="address">
+                        <h3 class="footer-h3">Athens Acadamy</h3>
+                        <p class="footer-para">45, High Level Road, <br/>Pepiliyana, Colombo</p>
+                    </div>
+                    <div id="contact">
+                        <h3 class="footer-h3" class="footer-h3">Contact us</h3>
+                        <p class="footer-para">Hotline : +94 113 56 2177<br/>Fax : +94 113 56 2177<br/>Email : Aethensacademy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

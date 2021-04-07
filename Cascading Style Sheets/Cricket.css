@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+/* initialize styles for grids */
+:root{
+	--main-radius:5px;
+	--main-padding:5px;
+}
+
+/* main element container */
+.container{
+	width: 100%;
+	overflow:auto;
+	position: relative;
+	background-image: url("../Images/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.5fr 1fr 1fr 1fr;
+	grid-template-rows: 0.3fr 1.5fr 1.5fr 1.5fr 1.2fr;
+	grid-template-areas: 
+		"logo navbar navbar navbar"
+		"slider slider slider slider"
+		"topic1 topic1 topic1 topic1"
+		"item1 item1 item1 item2"
+		"content1 content1 content2 content3"
+		"footer footer footer footer";
+	grid-gap: 0.2rem;
+}
+
+#logo{
+	grid-area: logo;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+
+}
+
+/* navigation bar area */
+.navbar{
+	grid-area: navbar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+/* image slider area */
+#slider{
+	grid-area: slider;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	margin: 0 auto;
+	height: 550px;
+	width: 1700px;
+	overflow: hidden;
+	border-style: outset;
+	border-width: 10px;
+	border-color: rgb(255,255,255,0.9);
+	background: url("../Images/cricket1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: 15s slide infinite;
+	margin-top: 50px; 
+	
+}
+
+/* main content description area*/
+#content{
+	background: rgb(255,255,255,0.5);
+	margin-top: 400px;
+	width: 1700px;
+	height: 150px;
+}
+
+/* heading of main content */
+#heading{
+	text-decoration: none;
+	font-size: 24px;
+	letter-spacing: 1px;
+	margin-left: 5px;
+	padding-top: 10px;
+	color: black;
+}
+
+/* text of main content */
+#text{
+	text-shadow: none;
+	font-size: 20px;
+	letter-spacing: 1px;
+	background: rgb(0,0,0,0.7);
+	height: 80px;
+	padding: 5px 5px 5px 5px;
+	color: aliceblue;
+}
+
+/* artical about cricket */
+#topic1{
+	grid-area: topic1;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	margin: 0 auto;
+	background: rgb(0,0,0,0.4);
+	padding: 20px;
+	width: 1700px;
+	margin-top: 50px;
+}
+
+#topic1 h1{
+	color: aliceblue;
+}
+
+#topic1 p{
+	color: #FFFFFF;
+	text-align: justify;
+	letter-spacing: 0;
+	font-size: 22px;
+	text-shadow: none;
+}
+
+/* academy player deetails */
+#item1{
+	grid-area: item1 ;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	padding: 50px;
+	margin-top: 50px;
+	height: auto;
+	
+}
+
+/* academy achievements*/
+#item2{
+	grid-area: item2 ;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	padding: 50px;
+	margin-top: 50px;
+	line-height: 70px;
+	text-transform: capitalize;
+	margin-left: -100px;
+	height: auto;
+	margin-right: 50px;
+}
+
+
+#item2 ul li{
+	color: white;
+	font-size: 24px;
+}
+
+#item2 h1{
+	color: cyan;
+}
+
+#item1 h1{
+	color: white;
+}
+
+/* player image area*/
+.players{
+	position: relative;
+	width: 15%;
+	height: 15%;
+	float: left;
+	margin: 80px 1%;
+}
+
+/* player images */
+.img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* player description*/
+.deatil-area{
+	position: absolute;
+	bottom: -80%;
+	left: 0;
+	right: 0;
+	height: 0;
+	background: #144756;
+	overflow: hidden;
+	width: 100%;
+	transition: 0.6s ease;	
+}
+
+.players:hover .deatil-area{
+	height: 60%;
+}
+
+.detail{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: aliceblue;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* cricket skill content description */
+#content1{
+	margin-top: -10%;
+	grid-area: content1;
+	border-radius: 5%;
+	padding-top: var(--main-padding);
+	padding: 30px;
+	background: rgba(0,0,0,0.5);
+	margin-left: 30px;
+	color: aliceblue;
+}
+
+/* cricket equipments content description */
+#content2{
+	margin-top: -10%;
+	grid-area: content2;
+	border-radius: 5%;
+	padding-top: var(--main-padding);
+	padding: 30px;
+	background: rgba(255,255,255,0.5);
+	color: aliceblue;
+	margin-left: 30px;
+	
+}
+
+/* youtube video area */
+#content3{
+	margin-top: -10%;
+	grid-area: content3;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	padding: 30px;
+}
+
+iframe{
+	margin-left: 20px;
+}
+
+/* footer area */
+#footer{
+	grid-area: footer;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+@keyframes slide {
+	0%{
+		background: url("../Images/cricket1.jpg");
+	}
+	33%{
+		background: url("../Images/cricket2.jpg");
+	}
+	67%{
+		background: url("../Images/cricket3.jpg");
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+body{
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#containerQuiz{
+	grid-area:containerQuiz;
+    margin : 20px auto;
+	height:auto;
+    width : 100%;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.body{ 
+	grid-area: body;
+	font-size:20px;
+	color:#fff;
+}
+
+.body > h2{
+	text-align:center;
+	padding-bottom:25px;
+}
+
+.body ol li{
+	padding-bottom:5px;
+}
+#logo { 
+	grid-area: logo; 
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+.navbar { 
+	grid-area: navbar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+
+
+.container {
+	background-image: url("../Images/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+	grid-template-rows: 0.3fr 1.5fr 1.5fr 1.2fr;
+  	grid-template-areas:
+		'logo navbar navbar navbar '
+		'body body body body'
+		'containerQuiz containerQuiz containerQuiz containerQuiz '
+		'footer footer footer footer';
+ 	grid-gap: 0.2rem;
+  
+}
+
+#footer{
+	grid-area: footer;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+
+.container > div {
+  text-align: left;
+}
+
+
+#start{
+	font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width:30%;
+    height:100px;
+    border : 2px solid lightgrey;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    left:35%;
+    color : lightgrey;
+	margin-bottom:15px;
+}
+
+#start:hover{
+    border: 3px solid lightseagreen;
+    color : lightseagreen;
+}
+
+#qImg{
+    width : 200px;
+    height : 200px;
+    position: absolute;
+    left : 0px;
+    top : 0px;
+}
+#qImg img{
+    width : 200px;
+    height : 200px;
+    border-top-left-radius: 5px;
+}
+
+#question{
+    width:auto;
+    height : 500px;
+    position: relative;
+    right:0;
+	background-image:url("../Images/background2.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+#question p{
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+	color:#fff;
+}
+
+#choices{
+    width : 480px;
+    position: absolute;
+    right : 0;
+    top : 160px;
+    padding : 10px
+}
+.choice{
+    display: inline-block;
+    width : 135px;
+    text-align: center;
+    border : 5px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 9px;
+	color: #100c49 ;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+#counter{
+    font-size: 3em;
+}
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
+#progress{
+    width : 500px;
+    position: absolute;
+    bottom : 0px;
+    right : 0px;
+    padding:5px;
+    text-align: right;
+	margin-bottom: 80px;
+}
+
+
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+#scoreContainer{
+    margin : 20px auto;
+    opacity: 0.8;
+    height: 400px;
+    width : auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+#scoreContainer img{
+    position: absolute;
+    top:100px;
+    left:325px;
+}
+#scoreContainer p{
+    position: relative;
+    display: block;
+    width : 59px;
+    height :59px;
+    top:130px;
+    left:45%;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+button {
+  font-family: monospace;
+  /*background-color: #4CAF50;
+  border: none;
+  color: white;*/
+  padding: 16px 32px;
+  //text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  //font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  //cursor: pointer;
+  border-radius: 15px;
+  background-color: white; 
+  /*color: black; 
+  border: 2px solid #008CBA;*/
+}
+button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+#footer #copyrights{
+	height: auto;
+	margin-left: 300px;
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

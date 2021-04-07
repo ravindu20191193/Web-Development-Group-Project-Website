@@ -1,0 +1,98 @@
+.container{
+	width: 100%;
+	height: 100%;
+	overflow:auto;
+	background-image: url("../Images/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: slide 15s infinite;
+	
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.3fr 1fr 1fr ;
+	grid-template-rows: 0.3fr 1.5fr 1.5fr 1.5fr 1.5fr 1.2fr;
+	grid-template-areas: 
+		"logo navbar navbar"
+		"heading heading heading"
+		"item2 item2 item2"
+		"images images images"
+		"item1 item1 item1"
+		"footer footer footer";
+	grid-gap: 0.2rem;
+}
+
+#logo{
+	grid-area: logo;
+}
+
+.navbar{
+	grid-area: navbar;
+}
+
+.heading{
+	grid-area:heading;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	text-shadow: none;
+	background: rgba(0,0,0,0.60);
+}
+
+.heading img{
+	height: 150%;
+	width: 150%;
+	margin-left: -25%;
+}
+
+.item2{
+	grid-area: item2;
+	margin: 20px auto;
+	text-align: left;
+	background: rgba(68,165,255,0.60);
+	border-radius: 20px;
+	color: aliceblue;
+	text-shadow: none;padding: 30px;
+	
+}
+
+.images{
+	grid-area: images;
+}
+
+.images img{
+	padding: 30px;
+}
+
+.item1{
+	grid-area: item1;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.60);
+}
+
+.item1 h1{
+	font-size: 28px;
+	color: white;
+	margin-left: 50px;
+}
+
+.item1 p{
+	font-size: 24px;
+	color: white;
+	margin-left: 100px;
+	letter-spacing: 0;
+	text-shadow: none;
+	margin: 50px;
+}
+
+.item1 ul {
+	font-size: 24px;
+	color: white;
+	line-height: 40px;
+	margin-left: 100px;
+}
+
+
+#footer{
+	grid-area: footer;
+}
+
